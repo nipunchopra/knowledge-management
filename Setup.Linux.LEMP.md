@@ -2,7 +2,7 @@
 id: ur1x1chx99zo9n7760csif8
 title: LEMP
 desc: "Setup Nginx, MySQL and PHP"
-updated: 1672486390427
+updated: 1672742188044
 created: 1672474450021
 ---
 
@@ -250,3 +250,35 @@ sudo service nginx reload
 ###
 
 > ### [[Certbot|Setup.Linux.Certbot]] - If want to setup SSL on the server.
+
+##
+
+## **Step 6 - Laravel file permissions**
+
+> Never set a directory to 777. you should change directory ownership. so set your current user that you are logged in with as owner and the webserver user (www-data, apache, ...) as the group. You can try this:
+
+```shell
+sudo chown -R $USER:www-data storage
+sudo chown -R $USER:www-data bootstrap/cache
+```
+
+then to set directory permission try this:
+
+```shell
+chmod -R 775 storage
+chmod -R 775 bootstrap/cache
+```
+
+Update:
+
+Webserver user and group depend on your webserver and your OS. to figure out what's your web server user and group use the following commands. for nginx use:
+
+```shell
+ps aux|grep nginx|grep -v grep
+```
+
+for apache use:
+
+```shell
+ps aux | egrep '(apache|httpd)'
+```
