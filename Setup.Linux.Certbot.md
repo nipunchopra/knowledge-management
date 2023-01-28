@@ -1,7 +1,7 @@
 ---
 id: rcohd1e53b7jyjgvcrn4q5i
 title: Certbot
-desc: "Setyp Certbot for SSL on Apache and Nginx Server"
+desc: "Setup Certbot for SSL on Apache and Nginx Server"
 updated: 1672486128715
 created: 1672485230506
 ---

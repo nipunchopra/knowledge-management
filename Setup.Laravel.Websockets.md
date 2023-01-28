@@ -2,7 +2,7 @@
 id: y6elnyzqw5gvt5yddpkey7e
 title: Websockets
 desc: ""
-updated: 1672743827269
+updated: 1674288827834
 created: 1672740879128
 ---
 
@@ -126,6 +126,14 @@ LARAVEL_WEBSOCKETS_SSL_LOCAL_PK=/etc/letsencrypt/live/example.com/privkey.pem
 
     'allow_self_signed' => true,
 ]
+```
+
+##
+
+> ### Install pusher.js and laravel-echo library
+
+```shell
+npm install --save-dev laravel-echo pusher-js
 ```
 
 ##
